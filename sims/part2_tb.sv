@@ -122,7 +122,7 @@ localparam MASK_BASE_ADDRESS = 'h76000000;
         writeRegister(MASK_BASE_ADDRESS, arr[i]);
         agent.wait_drivers_idle();
         #30ns // give Mask IP master time to write to BRAM
-        readRegister(BRAM_BASE_ADDRESS, Rdatabeat); // nneed from BRAM one byte at a time right now
+        readRegister(BRAM_BASE_ADDRESS, Rdatabeat); // read from BRAM one byte at a time right now
         tmp[7:0] = Rdatabeat[0];
         readRegister(BRAM_BASE_ADDRESS + 1, Rdatabeat);
         tmp[15:8] = Rdatabeat[0];
