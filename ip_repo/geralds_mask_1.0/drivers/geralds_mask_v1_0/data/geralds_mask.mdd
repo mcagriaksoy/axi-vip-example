@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER geralds_mask
+	OPTION supported_peripherals = (geralds_mask);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = geralds_mask;
+END DRIVER
